@@ -46,6 +46,16 @@
 
 
 
+        const getClients = () => {
+            $.ajax({
+                url: `${API}/clients`,
+                success: clients => {
+                    renderRows(clients)
+                    $('[name]').val('')
+                }
+            })
+        }
+
 
         $(() => {
             getClients()
