@@ -57,6 +57,11 @@
             $('#clientsRows').html(rows)
         }
 
+        const loadClient = client => {
+            $('[name=id]').val(client._id)
+            $('[name=name]').val(client.name)
+        }
+
         const removeClient = client => {
             $.ajax({
                 method: 'DELETE',
