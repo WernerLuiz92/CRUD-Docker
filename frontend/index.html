@@ -57,6 +57,13 @@
             $('#clientsRows').html(rows)
         }
 
+        const removeClient = client => {
+            $.ajax({
+                method: 'DELETE',
+                url: `${API}/clients/${client._id}`,
+                success: getClients
+            })
+        }
 
         const getClients = () => {
             $.ajax({
