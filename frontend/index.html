@@ -38,6 +38,9 @@
     <script>
         const API = 'http://localhost:3000'
 
+        const createButton = (label, type) => {
+            return $('<button>').addClass(`btn btn-${type}`).html(label)
+        }
 
 
 
